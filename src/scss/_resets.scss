@@ -1,0 +1,23 @@
+/*
+
+  RESETS
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+}
