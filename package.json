@@ -1,6 +1,6 @@
 {
   "name": "makeify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Makefile-based build for a static compiled web application with browserify, React, and SASS.",
   "main": "src/jsx/app.jsx",
   "scripts": {
