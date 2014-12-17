@@ -35,7 +35,7 @@ public/index.html:
 
 # Debug builds with source maps
 
-build_css: clean_css public/index.css
+build_debug: build_debug_css build_debug_js
 
 build_debug_css: clean_css
 	./node_modules/.bin/node-sass src/scss/index.scss public/index.css --source-map
