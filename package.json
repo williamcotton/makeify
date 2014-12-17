@@ -1,7 +1,7 @@
 {
   "name": "makeify",
   "version": "0.0.1",
-  "description": "A Makefile-based build for a static compiled web application with browserify, ReactJS, and SASS.",
+  "description": "A Makefile-based build for a static compiled web application with browserify, React, and SASS.",
   "main": "src/jsx/app.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,10 +31,11 @@
   },
   "dependencies": {
     "browserify": "~4.2.0",
-    "reactify": "~0.13.1",
-    "react-tools": "~0.10.0",
-    "uglify-js": "~2.4.14",
     "node-sass": "~0.9.3",
-    "swig": "~1.3.2"
+    "react": "^0.12.1",
+    "react-tools": "~0.10.0",
+    "reactify": "~0.13.1",
+    "swig": "~1.3.2",
+    "uglify-js": "~2.4.14"
   }
 }
