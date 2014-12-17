@@ -32,3 +32,20 @@ public/index.css:
 
 public/index.html: 
 	./node_modules/.bin/swig render src/shtml/index.shtml -j package.json > $@
+
+# Debug builds with source maps
+
+build_css: clean_css public/index.css
+
+build_debug_css: clean_css
+	./node_modules/.bin/node-sass src/scss/index.scss public/index.css --source-map
+
+build_debug_js: clean_js
+	./node_modules/.bin/browserify src/js/index.js -t reactify > public/index.js -d
+
+clean_css:
+	rm -f public/index.css
+	rm -f public/index.css.map
+
+clean_js:
+	rm -f public/index.js
