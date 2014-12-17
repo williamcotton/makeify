@@ -1,5 +1,5 @@
 /** @jsx React.DOM */
-var React = require("../js/react");
+var React = require("react");
 var App = React.createClass({
   render: function() {
   	var name = this.props.name;
