@@ -41,7 +41,7 @@ build_non_inline:
 
 # Debug builds with source maps
 
-build_debug: build_debug_css build_debug_js
+build_debug: build_debug_css build_debug_js build_debug_html
 
 build_debug_css: clean_css
 	./node_modules/.bin/node-sass src/scss/index.scss public/index.css --source-map
@@ -49,9 +49,14 @@ build_debug_css: clean_css
 build_debug_js: clean_js
 	./node_modules/.bin/browserify src/js/index.js -t reactify > public/index.js -d
 
+build_debug_html: clean_html build_non_inline
+
 clean_css:
 	rm -f public/index.css
 	rm -f public/index.css.map
 
 clean_js:
 	rm -f public/index.js
+
+clean_html:
+	rm -f public/index.html
