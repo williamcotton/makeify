@@ -12,5 +12,5 @@ make
 To run the server:
 
 ```
-npm run server
+npm start
 ```
