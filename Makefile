@@ -30,8 +30,14 @@ public/index.js: tmp/index.uglify.js
 public/index.css:
 	./node_modules/.bin/node-sass src/scss/index.scss $@ --output-style compressed
 
-public/index.html: 
-	./node_modules/.bin/swig render src/shtml/index.shtml -j package.json > $@
+public/index.swig.html: 
+	./node_modules/.bin/swig render src/shtml/index-inline.shtml -j package.json > $@
+
+public/index.html: public/index.swig.html
+	./node_modules/.bin/html-inline -i $< -o $@
+
+build_non_inline: 
+	./node_modules/.bin/swig render src/shtml/index.shtml -j package.json > public/index.html
 
 # Debug builds with source maps
 

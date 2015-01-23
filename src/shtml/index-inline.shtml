@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+  <title>{{ name }}</title>
+  <script type="text/javascript">
+    var options = {
+      name: "{{name}}",
+      description: "{{description}}",
+      version: "{{version}}",
+      author: "{{author}}",
+      repository: {% autoescape false %}{{repository|json}}{% endautoescape %},
+      dependencies: {% autoescape false %}{{dependencies|json}}{% endautoescape %}
+    };
+  </script>
+  <link href="./index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="content"></div>
+  <script src="./index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

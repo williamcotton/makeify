@@ -1,6 +1,6 @@
 {
   "name": "makeify",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Makefile-based build for a static compiled web application with browserify, React, and SASS.",
   "main": "src/jsx/app.jsx",
   "scripts": {
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "browserify": "~4.2.0",
+    "html-inline": "^1.1.1",
     "http-server": "^0.7.4",
     "node-sass": "~0.9.3",
     "react": "^0.12.1",
